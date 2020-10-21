@@ -13,8 +13,8 @@ class Product extends Component {
             <h4>Product Name</h4>
 
             <div className="prices">
-                <h5>Total:$xxx</h5>
                 <h6>Price:$xxx</h6>
+                <h5>Total:$xxx</h5>
             </div>
 
             <div className="controls">

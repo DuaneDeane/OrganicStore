@@ -1,3 +1,7 @@
+body {
+    background-image: url("../product/img/veggie.jpg");
+}
+
 .btn-add {
     display: inline-block;
     margin-left: 35px;
@@ -5,6 +9,7 @@
 
 .prices h5, .prices h6 {
     display: inline-block;
+    width: 100px;
 }
 
 .product {
@@ -18,7 +23,6 @@
     padding: 5px;
 }
 
-.quantityPicker {
-    display: inline-block;
+.quantity {
+    width: 30px;
 }
-

@@ -3,28 +3,34 @@ import "./product.css";
 import QuantityPicker from "../quantityPicker/quantityPicker";
 
 class Product extends Component {
-    state = {};
+    state = {
+        quantity: 1
+    };
 
     render() {
         return( 
-        <div class="product">
-            <img src="https://picsum.photos/150/200"></img>
+        <div className="product">
+            <img src={"/products/"+this.props.data.image}></img>
 
-            <h4>Product Name</h4>
+        <h4>{this.props.data.title}</h4>
 
             <div className="prices">
-                <h6>Price:$xxx</h6>
-                <h5>Total:$xxx</h5>
+                <h6>Price:{this.props.data.price}</h6>
+                <h5>Total:{this.props.data.price * this.state.quantity}</h5>
             </div>
 
             <div className="controls">
-                <QuantityPicker></QuantityPicker>
+                <QuantityPicker minimum={this.props.data.minimum || 1} onValueChange={ (qnty) => this.handleQuantityChange(qnty) }></QuantityPicker>
                 <button className="btn btn-sm btn-info">Add</button>
             </div>
-
         </div>
         );
     }
+    
+    handleQuantityChange = (quantity) => {
+        console.log("Qnty changed", quantity);
+        this.setState({quantity: quantity});
+    };
 }
 
 export default Product;

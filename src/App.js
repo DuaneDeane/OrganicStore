@@ -15,10 +15,10 @@ function App() {
       <NavBar></NavBar>
 
       <div className="container">
-        <Catalog></Catalog>
+        {/* <Catalog></Catalog> */}
 
         <hr></hr>
-        {/* <Todo></Todo> */}
+        <Todo></Todo>
       </div>
 
       <Footer></Footer>

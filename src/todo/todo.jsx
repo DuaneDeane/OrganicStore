@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import "./todo.css";
 class Todo extends Component {
     state = {
         todoText: "", 
@@ -10,15 +10,15 @@ class Todo extends Component {
         return ( 
             <div>
                 <h5>Simple todo App</h5>
-                
+
                 <div>
                     <input type="text" value={this.state.todoText} onChange={this.handleTextChange} placeholder="Todo text"></input>
                     <button onClick={this.addTodo}>Add</button>
                 </div>
 
-                <div>
+                <div id="todoList">
                     <ul>
-                        {this.state.todos.map((text) => <li>{text}</li>)}
+                        {this.state.todos.map((text) => <li key={text}>{text}</li>)}
                     </ul>
                 </div>
             </div>
@@ -26,14 +26,15 @@ class Todo extends Component {
     }
     addTodo = () => {
         console.log(this.state.todoText);
+        this.state.todos.push(this.state.todoText);
         // copy the array from the state into a variable
-        let newtodos = [...this.state.todos];
+        // let newtodos = [...this.state.todos];
         // push the text into a var
-        var text = this.state.todoText;
+        // var text = this.state.todoText;
         // update the array in the state with the var
         this.setState({
-            todos: newtodos
-        })
+            todoText: ""
+        });
     }
     handleTextChange = (event) => {
         this.setState({todoText: event.target.value});

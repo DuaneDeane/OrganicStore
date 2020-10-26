@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import NavBar from '../navBar/navBar';
 
 class QuantityPicker extends Component {
   state = {
-    quantity: 1,
+    quantity: this.props.minimum,
     minimum: this.props.minimum,
   };
 

@@ -10,13 +10,13 @@ class Product extends Component {
     render() {
         return( 
         <div className="product">
-            <img src={"/products/"+this.props.data.image}></img>
+            <img src={"/products/"+this.props.data.image} alt=""></img>
 
         <h4>{this.props.data.title}</h4>
 
             <div className="prices">
                 <h6>Price:{this.props.data.price}</h6>
-                <h5>Total:{this.props.data.price * this.state.quantity}</h5>
+                <h5>Total:{this.getTotal()}</h5>
             </div>
 
             <div className="controls">
@@ -25,6 +25,11 @@ class Product extends Component {
             </div>
         </div>
         );
+    }
+
+    getTotal = () => {
+        let total = this.props.data.price * this.state.quantity;
+        return total.toFixed(2);
     }
     
     handleQuantityChange = (quantity) => {

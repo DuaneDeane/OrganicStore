@@ -1,5 +1,4 @@
 // mock data
-import React from "react";
 import "./productService.css";
 
 var data = [
@@ -10,7 +9,7 @@ var data = [
       title: "Cabbage",
       image: "img-1.jpg",
       discount: 5,
-      category: "Veggetable",
+      category: "Vegetable",
     },
     {
       id: "5f40a6ba41d9e5044ced586c",
@@ -28,7 +27,7 @@ var data = [
       title: "Egg Plant",
       image: "img-8.jpg",
       discount: 0,
-      category: "Veggetable",
+      category: "Vegetable",
     },
     {
       id: "5f40a6baf0f068a497921d29",
@@ -37,7 +36,7 @@ var data = [
       title: "Carrot",
       image: "img-4.jpg",
       discount: 0,
-      category: "Veggetable",
+      category: "Vegetable",
     },
     {
       id: "5f40a866337a3bb00793da52",
